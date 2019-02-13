@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const token = process.env.token
 const fs = require('fs')
 const client = new Discord.Client();
 
@@ -8,7 +9,7 @@ var prefix = "_";
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
 
 
-client.login('NTMwNDE3NDk1OTgzNTIxNzky.DzS5Tg.0eeONE2Kn0_M2iASyRM_rBMmcko')
+client.login(token)
 
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
